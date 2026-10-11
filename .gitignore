@@ -1,13 +1,13 @@
-# Backup e file temporanei
+# Backup
 index.backup*.html
 *.bak
 *.tmp
 
-# Script di sviluppo
+# Script sviluppo
 *.ps1
 !deploy.ps1
 
-# File spazzatura (GUID)
+# File GUID spuri
 [0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]-*
 *_original.avif
 
