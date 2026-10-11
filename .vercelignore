@@ -1,0 +1,5 @@
+_backup_prima_pulizia/
+_duplicati_backup_2026-10-11/
+_orfani_backup_2026-10-11/
+*.bak
+*.ps1

@@ -1,19 +1,5 @@
-# Backup
-index.backup*.html
+_backup_prima_pulizia/
+_duplicati_backup_2026-10-11/
+_orfani_backup_2026-10-11/
 *.bak
-*.tmp
-
-# Script sviluppo
 *.ps1
-!deploy.ps1
-
-# File GUID spuri
-[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]-*
-*_original.avif
-
-# Sistema
-.DS_Store
-Thumbs.db
-.vercel
-node_modules/
-.env.local
