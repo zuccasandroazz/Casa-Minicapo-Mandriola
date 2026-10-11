@@ -116,5 +116,5 @@ vercel --prod --yes
 
 Write-Host "`n==================================================" -ForegroundColor Cyan
 Write-Host "FATTO! Ricarica il sito tra 20-30 secondi con Ctrl+F5:" -ForegroundColor Green
-Write-Host "https://villa-mare-blu.vercel.app" -ForegroundColor White
+Write-Host "https://casa-minicapo-mandriola.vercel.app" -ForegroundColor White
 Write-Host "==================================================`n" -ForegroundColor Cyan

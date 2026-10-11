@@ -153,10 +153,10 @@ Start-Sleep -Seconds 5
 $out = vercel ls --prod | Out-String
 $url = ([regex]::Match($out, 'https://villa-mare-[a-z0-9]+-leader-d231\.vercel\.app')).Value
 if ($url) {
-    vercel alias set ($url -replace 'https://','') villa-mare-blu.vercel.app
+    vercel alias set ($url -replace 'https://','') casa-minicapo-mandriola.vercel.app
 }
 
 Write-Host "`n==================================================" -ForegroundColor Cyan
 Write-Host "FATTO! Ricarica tra 30 secondi:" -ForegroundColor Green
-Write-Host "https://villa-mare-blu.vercel.app" -ForegroundColor White
+Write-Host "https://casa-minicapo-mandriola.vercel.app" -ForegroundColor White
 Write-Host "==================================================`n" -ForegroundColor Cyan

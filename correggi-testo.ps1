@@ -46,4 +46,4 @@ git add .
 git commit -m "Pulizia errori tipografici e simboli"
 git push
 vercel --prod --yes
-Write-Host "`nFATTO! Ricarica tra 30 secondi: https://villa-mare-blu.vercel.app" -ForegroundColor Cyan
+Write-Host "`nFATTO! Ricarica tra 30 secondi: https://casa-minicapo-mandriola.vercel.app" -ForegroundColor Cyan

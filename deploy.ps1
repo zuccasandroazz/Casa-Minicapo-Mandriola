@@ -72,9 +72,9 @@ if ([string]::IsNullOrWhiteSpace($deployUrl)) {
 Write-Host "  OK: deploy a $deployUrl" -ForegroundColor Green
 
 # --- 5. Ricollega dominio (risolve il 404) ---
-Write-Host "[5/6] Ricollego dominio villa-mare-blu.vercel.app..." -ForegroundColor Yellow
+Write-Host "[5/6] Ricollego dominio casa-minicapo-mandriola.vercel.app..." -ForegroundColor Yellow
 $deployDomain = $deployUrl -replace "https://",""
-$aliasOutput = vercel alias set $deployDomain villa-mare-blu.vercel.app 2>&1 | Out-String
+$aliasOutput = vercel alias set $deployDomain casa-minicapo-mandriola.vercel.app 2>&1 | Out-String
 if ($aliasOutput -match "Success") {
     Write-Host "  OK: dominio collegato" -ForegroundColor Green
 } else {
@@ -85,7 +85,7 @@ if ($aliasOutput -match "Success") {
 # --- 6. Verifica finale ---
 Write-Host "[6/6] Verifica finale..." -ForegroundColor Yellow
 Start-Sleep -Seconds 3
-$curlOutput = curl.exe -s -I https://villa-mare-blu.vercel.app 2>&1 | Out-String
+$curlOutput = curl.exe -s -I https://casa-minicapo-mandriola.vercel.app 2>&1 | Out-String
 if ($curlOutput -match "HTTP/1.1 200") {
     Write-Host "  OK: sito online e raggiungibile" -ForegroundColor Green
 } else {
@@ -98,7 +98,7 @@ Write-Host "==================================================" -ForegroundColor
 Write-Host "  DEPLOY COMPLETATO!" -ForegroundColor Green
 Write-Host "==================================================" -ForegroundColor Cyan
 Write-Host ""
-Write-Host "  Sito online:  https://villa-mare-blu.vercel.app" -ForegroundColor White
+Write-Host "  Sito online:  https://casa-minicapo-mandriola.vercel.app" -ForegroundColor White
 Write-Host "  GitHub:       https://github.com/zuccasandroazz/villa-mare-blu" -ForegroundColor White
 Write-Host ""
 Write-Host "  Per il prossimo deploy, esegui:" -ForegroundColor Yellow
