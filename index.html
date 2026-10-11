@@ -1458,5 +1458,153 @@ document.addEventListener('DOMContentLoaded', function(){
   });
 });
 </script>
+<style id="mobile-hero-optimization">
+/* ============================================================
+   OTTIMIZZAZIONE MOBILE HERO - Override finale
+   ============================================================ */
+
+/* Smartphone e tablet (max 768px) */
+@media (max-width: 768px) {
+  /* Hero: altezza ridotta, non troppo alta */
+  .hero {
+    height: 92vh !important;
+    min-height: 560px !important;
+    max-height: 720px !important;
+  }
+
+  /* Foto copertina: mostra la parte centrale-alta, più adatta ai volti */
+  .hero-bg,
+  .hero-bg[style*="hero-copertina.jpg"] {
+    background-size: cover !important;
+    background-position: center 30% !important;
+  }
+
+  /* Contenuto hero: padding ridotto */
+  .hero-content {
+    padding: 0 20px !important;
+    max-width: 100% !important;
+  }
+
+  /* Badge: più compatto */
+  .hero-badge {
+    font-size: .7rem !important;
+    padding: 7px 14px !important;
+    letter-spacing: 1.5px !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Titolo: leggibile, ben spaziato */
+  .hero h1,
+  .hero-content h1 {
+    font-size: 2.1rem !important;
+    line-height: 1.15 !important;
+    margin-bottom: 18px !important;
+  }
+
+  /* Paragrafo: più compatto */
+  .hero p,
+  .hero-content p {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 30px !important;
+    padding: 0 4px !important;
+  }
+
+  /* Pulsanti: impilati, full-width, ben spaziati */
+  .hero-cta {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
+    padding: 0 !important;
+  }
+
+  .hero-cta .btn {
+    width: 100% !important;
+    padding: 15px 24px !important;
+    font-size: .92rem !important;
+    justify-content: center !important;
+  }
+
+  /* Nascondi indicatore "scorri" su mobile */
+  .scroll-indicator {
+    display: none !important;
+  }
+
+  /* Dissolvenza copertina: più veloce su mobile */
+  .hero-bg[style*="hero-copertina.jpg"] {
+    animation: coverFadeInMobile 6s ease-in-out forwards, kenburns 20s ease-in-out infinite alternate !important;
+  }
+
+  .hero-bg.hero-bg-2 {
+    animation-delay: 3s !important;
+  }
+  .hero-bg.hero-bg-3 {
+    animation-delay: 9s !important;
+  }
+  .hero-bg.hero-bg-4 {
+    animation-delay: 15s !important;
+  }
+
+  @keyframes coverFadeInMobile {
+    0%, 50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+}
+
+/* Smartphone piccoli (max 480px) */
+@media (max-width: 480px) {
+  .hero {
+    height: 88vh !important;
+    min-height: 500px !important;
+    max-height: 640px !important;
+  }
+
+  .hero h1,
+  .hero-content h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.12 !important;
+  }
+
+  .hero p,
+  .hero-content p {
+    font-size: .92rem !important;
+    margin-bottom: 26px !important;
+  }
+
+  .hero-badge {
+    font-size: .62rem !important;
+    padding: 6px 12px !important;
+    letter-spacing: 1.2px !important;
+  }
+
+  .hero-cta .btn {
+    padding: 13px 20px !important;
+    font-size: .88rem !important;
+  }
+
+  .hero-bg,
+  .hero-bg[style*="hero-copertina.jpg"] {
+    background-position: center 25% !important;
+  }
+}
+
+/* Smartphone orizzontale (landscape) */
+@media (max-width: 900px) and (orientation: landscape) {
+  .hero {
+    height: 100vh !important;
+    min-height: 420px !important;
+  }
+
+  .hero h1,
+  .hero-content h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .hero p {
+    font-size: .9rem !important;
+    margin-bottom: 20px !important;
+  }
+}
+</style>
 </body>
 </html>
