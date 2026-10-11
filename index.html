@@ -1073,6 +1073,28 @@ document.querySelectorAll('.faq-question').forEach(function(q){
   </div>
 </section>
 
+
+    <div class="ota-badge reveal">
+      <div class="ota-badge-item">
+        <div class="ota-badge-icon booking">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H8l4-4 4 4h-3v4h-2z"/></svg>
+        </div>
+        <div class="ota-badge-info">
+          <strong>Booking.com</strong>
+          <div class="score">9.5 <span>/ 10 - Eccellente</span></div>
+        </div>
+      </div>
+      <div class="ota-badge-item">
+        <div class="ota-badge-icon airbnb">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H8l4-4 4 4h-3v4h-2z"/></svg>
+        </div>
+        <div class="ota-badge-info">
+          <strong>Airbnb</strong>
+          <div class="score">4.81 <span>/ 5 - Oltre 80 recensioni</span></div>
+        </div>
+      </div>
+    </div>
+
 <section class="faq" id="faq">
   <div class="container">
     <div class="section-head reveal">
@@ -1104,6 +1126,17 @@ document.querySelectorAll('.faq-question').forEach(function(q){
           <strong>+39 328 743 4911</strong>
         </span>
       </a>
+
+      <div class="ota-buttons">
+        <a href="https://www.booking.com/hotel/it/casa-minicapo-san-vero-milis.html" target="_blank" rel="noopener" class="ota-btn booking">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H8l4-4 4 4h-3v4h-2z"/></svg>
+          Prenota su Booking.com
+        </a>
+        <a href="https://www.airbnb.it/rooms/3154767" target="_blank" rel="noopener" class="ota-btn airbnb">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H8l4-4 4 4h-3v4h-2z"/></svg>
+          Prenota su Airbnb
+        </a>
+      </div>
       <a href="mailto:mandriol@tiscali.it" class="cta-email">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         <span>mandriol@tiscali.it</span>
@@ -1332,6 +1365,34 @@ document.querySelectorAll('.faq-question').forEach(function(q){
   ::-webkit-scrollbar-track{background:var(--sand)}
   ::-webkit-scrollbar-thumb{background:var(--sea-light);border-radius:5px}
   ::-webkit-scrollbar-thumb:hover{background:var(--sea)}
+}
+/* ============================================================
+   PULSANTI BOOKING / AIRBNB
+   ============================================================ */
+.ota-buttons{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:30px 0}
+.ota-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:50px;text-decoration:none;font-weight:600;font-size:.9rem;letter-spacing:.3px;transition:all .3s cubic-bezier(.4,0,.2,1);color:#fff;box-shadow:0 10px 26px rgba(0,0,0,.15)}
+.ota-btn:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(0,0,0,.22)}
+.ota-btn svg{width:20px;height:20px;flex-shrink:0}
+.ota-btn.booking{background:#003580}
+.ota-btn.airbnb{background:#FF5A5F}
+
+/* ============================================================
+   BADGE RECENSIONI ESTERNE
+   ============================================================ */
+.ota-badge{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin:40px auto;max-width:860px;padding:28px;background:var(--white);border-radius:20px;box-shadow:var(--shadow-md);border:1px solid rgba(0,0,0,.05)}
+.ota-badge-item{display:flex;align-items:center;gap:14px;min-width:220px}
+.ota-badge-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0}
+.ota-badge-icon.booking{background:#003580}
+.ota-badge-icon.airbnb{background:#FF5A5F}
+.ota-badge-icon svg{width:24px;height:24px}
+.ota-badge-info strong{display:block;font-size:.85rem;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;font-weight:500;margin-bottom:4px}
+.ota-badge-info .score{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--sea-deep);line-height:1}
+.ota-badge-info .score span{font-size:.85rem;color:var(--muted);font-weight:400;font-family:'Inter',sans-serif}
+@media (max-width:560px){
+  .ota-badge{padding:20px;gap:16px}
+  .ota-badge-item{min-width:100%}
+  .ota-btn{padding:12px 20px;font-size:.85rem}
+  .ota-btn svg{width:18px;height:18px}
 }</style>
 
 <button class="scroll-top" id="scrollTop" aria-label="Torna su">
