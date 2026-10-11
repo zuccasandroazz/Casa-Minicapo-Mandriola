@@ -1,7 +1,19 @@
+# Backup e file temporanei
+index.backup*.html
+*.bak
+*.tmp
+
+# Script di sviluppo
+*.ps1
+!deploy.ps1
+
+# File spazzatura (GUID)
+[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]-*
+*_original.avif
+
+# Sistema
 .DS_Store
 Thumbs.db
 .vercel
 node_modules/
 .env.local
-.vercel
-.env*
