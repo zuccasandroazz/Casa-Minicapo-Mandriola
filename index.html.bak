@@ -54,7 +54,6 @@ nav.scrolled .hamburger span{background:var(--sea-deep)}
 @keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.15)}}
 .hero-content{position:relative;z-index:2;max-width:920px;padding:0 24px;animation:fadeUp 1.4s cubic-bezier(.2,.7,.3,1) .3s both}
 @keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
-.hero-badge{display:inline-block;padding:9px 22px;background:rgba(255,255,255,.14);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.28);border-radius:50px;font-size:.75rem;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:30px;font-weight:500}
 .hero h1{font-size:clamp(2.6rem,6.5vw,5rem);color:var(--white);margin-bottom:26px;line-height:1.05}
 .hero h1 em{font-style:italic;color:var(--gold);font-weight:400}
 .hero p{font-size:clamp(1.05rem,1.6vw,1.25rem);max-width:700px;margin:0 auto 44px;opacity:.95;font-weight:300;line-height:1.6}
@@ -456,12 +455,12 @@ document.querySelectorAll('.faq-question').forEach(function(q){
 </style>
 <style>
 @media (max-width:560px){
-  .floating-email{left:96px !important;width:44px !important;height:44px !important}
-  .floating-whatsapp{left:150px !important;width:44px !important;height:44px !important}
+  .floating-email{left: auto !important;width:44px !important;height:44px !important}
+  .floating-whatsapp{left: auto !important;width:44px !important;height:44px !important}
 }
 @media (min-width:561px) and (max-width:960px){
-  .floating-email{left:140px !important;width:48px !important;height:48px !important}
-  .floating-whatsapp{left:200px !important;width:48px !important;height:48px !important}
+  .floating-email{left: auto !important;width:48px !important;height:48px !important}
+  .floating-whatsapp{left: auto !important;width:48px !important;height:48px !important}
 }
 </style>
 <style id="hero-fix">
@@ -486,9 +485,9 @@ document.querySelectorAll('.faq-question').forEach(function(q){
 /* Sposta il testo della hero verso il basso per non coprire l'immagine */
 .hero-content {
   position: absolute !important;
-  bottom: 4vh !important;
+  bottom: auto !important;
   top: auto !important;
-  left: 50% !important;
+  left: 60% !important;
   transform: translateX(-50%) !important;
   max-width: 900px !important;
   width: 90% !important;
@@ -499,7 +498,7 @@ document.querySelectorAll('.faq-question').forEach(function(q){
 /* Su mobile alza un po' per non finire fuori schermo */
 @media (max-width: 768px) {
   .hero-content {
-    bottom: 6vh !important;
+    bottom: auto !important;
     width: 92% !important;
   }
   .hero-content h1 {
@@ -507,6 +506,238 @@ document.querySelectorAll('.faq-question').forEach(function(q){
   }
   .hero-content p {
     font-size: 0.92rem !important;
+  }
+}
+</style>
+
+<style id="hero-panel-details-fix">
+.hero-panel .hero-panel-details {
+  margin-top: 65% !important;
+  padding-top: 65% !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.18) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  font-family: 'Inter', sans-serif !important;
+}
+.hero-panel .hero-panel-details .detail-row {
+  display: flex !important;
+  gap: 10px !important;
+  align-items: flex-start !important;
+  font-size: 0.92rem !important;
+  line-height: 1.55 !important;
+  color: #f4ede4 !important;
+}
+.hero-panel .hero-panel-details .detail-label {
+  flex: 0 0 auto !important;
+  min-width: 100px !important;
+  font-weight: 600 !important;
+  color: #e07856 !important;
+  letter-spacing: 0.3px !important;
+  text-transform: uppercase !important;
+  font-size: 0.72rem !important;
+  padding-top: 65% !important;
+}
+.hero-panel .hero-panel-details .detail-text {
+  flex: 1 !important;
+  color: #f4ede4 !important;
+}
+@media (max-width: 768px) {
+  .hero-panel .hero-panel-details .detail-row {
+    flex-direction: column !important;
+    gap: 2px !important;
+  }
+  .hero-panel .hero-panel-details .detail-label {
+    min-width: 0 !important;
+  }
+}
+</style>
+<style id="hero-panel-fix">
+/* Pannello informativo elegante nella hero */
+.hero-panel {
+  position: absolute !important;
+  left: 12px !important;
+  right: auto !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  max-width: 420px !important;
+  width: 24vw !important;
+  min-width: 280px !important;
+  padding: 32px 34px !important;
+  background: rgba(8, 41, 58, 0.78) !important;
+  backdrop-filter: blur(16px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(140%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  border-radius: 0 18px 18px 0 !important;
+  color: #f4ede4 !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.96rem !important;
+  line-height: 1.65 !important;
+  letter-spacing: 0.2px !important;
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.45),
+    0 2px 0 rgba(255, 255, 255, 0.06) inset !important;
+  z-index: 6 !important;
+  text-align: left !important;
+  max-height: 82vh !important;
+  overflow-y: auto !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(255,255,255,0.25) transparent !important;
+}
+.hero-panel::-webkit-scrollbar {
+  width: 6px !important;
+}
+.hero-panel::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.22) !important;
+  border-radius: 3px !important;
+}
+.hero-panel p {
+  margin: 0 0 14px 0 !important;
+  color: #f4ede4 !important;
+}
+.hero-panel .hero-panel-label {
+  display: block !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 2.5px !important;
+  text-transform: uppercase !important;
+  color: #e07856 !important;
+  margin-bottom: 8px !important;
+}
+.hero-panel .hero-panel-details {
+  margin-top: 18px !important;
+  padding-top: 18px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.16) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+.hero-panel .hero-panel-details .detail-row {
+  display: flex !important;
+  gap: 12px !important;
+  align-items: flex-start !important;
+  font-size: 0.9rem !important;
+  line-height: 1.55 !important;
+}
+.hero-panel .hero-panel-details .detail-label {
+  flex: 0 0 auto !important;
+  min-width: 108px !important;
+  font-weight: 600 !important;
+  color: #e07856 !important;
+  letter-spacing: 0.6px !important;
+  text-transform: uppercase !important;
+  font-size: 0.68rem !important;
+  padding-top: 3px !important;
+}
+.hero-panel .hero-panel-details .detail-text {
+  flex: 1 !important;
+  color: #f4ede4 !important;
+}
+
+/* Tablet: pannello centrato sotto il testo */
+@media (max-width: 1100px) {
+  .hero-panel {
+    position: relative !important;
+    left: 12px !important;
+    right: auto !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 24vw !important;
+    max-width: 420px !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+}
+
+/* Mobile: pannello compatto */
+@media (max-width: 768px) {
+  .hero-panel {
+    padding: 22px 22px !important;
+    font-size: 0.9rem !important;
+    max-width: 420px !important;
+    border-radius: 0 18px 18px 0 !important;
+  }
+  .hero-panel .hero-panel-details .detail-row {
+    flex-direction: column !important;
+    gap: 2px !important;
+  }
+  .hero-panel .hero-panel-details .detail-label {
+    min-width: 0 !important;
+  }
+}
+</style>
+<style id="hero-title-center-fix">
+/* Centra il titolo Casa Minicapo Mandriola nella hero */
+.hero-content h1 {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100% !important;
+}
+/* Su mobile rimane centrato */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    text-align: center !important;
+  }
+}
+</style>
+<style id="hero-panel-left-fix">
+.hero-panel {
+  position: absolute !important;
+  left: 12px !important;
+  right: auto !important;
+  top: 50% !important;
+  bottom: auto !important;
+  transform: translateY(-50%) !important;
+  margin: 0 !important;
+  border-radius: 0 18px 18px 0 !important;
+}
+@media (max-width: 1100px) {
+  .hero-panel {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    margin: 32px auto 0 auto !important;
+    border-radius: 18px !important;
+  }
+}
+</style>
+<style id="hero-panel-beside-nav-fix">
+/* Pannello posizionato subito sotto la navbar, a filo sinistro */
+.hero-panel {
+  position: absolute !important;
+  left: 0 !important;
+  right: auto !important;
+  top: 80px !important;      /* altezza navbar */
+  bottom: auto !important;
+  transform: none !important;
+  margin: 0 !important;
+  border-radius: 0 18px 18px 0 !important;
+  max-height: calc(100vh - 100px) !important;
+  overflow-y: auto !important;
+}
+@media (max-width: 1100px) {
+  .hero-panel {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    margin: 32px auto 0 auto !important;
+    border-radius: 18px !important;
+    max-height: none !important;
+  }
+}
+</style>
+
+<style id="hero-panel-more-left-fix">
+.hero-panel {
+  margin-left: -240px !important;
+}
+@media (max-width: 1100px) {
+  .hero-panel {
+    margin-left: auto !important;
   }
 }
 </style>
@@ -532,14 +763,35 @@ document.querySelectorAll('.faq-question').forEach(function(q){
   <div class="hero-bg hero-bg-3" style="background-image:url('images/primo-piano/camera-1.avif')"></div>
   <div class="hero-bg hero-bg-4" style="background-image:url('images/paesaggio/mare.avif')"></div>
   <div class="hero-content">
-    <div class="hero-badge">Sinis - Sardegna - a 1000 metri dal mare</div>
     <h1>Casa <em>Minicapo</em><br>Mandriola</h1>
     <p>Due appartamenti indipendenti, piano terra e primo piano, completamente indipendenti con ingresso autonomo. Nel cuore del Sinis, a due passi dal mare cristallino di San Vero Milis.</p>
     <div class="hero-cta">
       <a href="#appartamenti" class="btn btn-primary">Scopri gli appartamenti</a>
       <a href="#contatti" class="btn btn-ghost">Contattaci</a>
     </div>
-  </div>
+        <aside class="hero-panel" aria-label="Descrizione dell'alloggio">
+    <span class="hero-panel-label">L'alloggio</span>
+    <p>Goditi il mare della Sardegna in questa accogliente casa a Mandriola, a pochi passi dal mare e dalle spiagge del Sinis. Ideale per famiglie o una coppia che cercano comfort ed indipendenza.</p>
+    <div class="hero-panel-details">
+      <div class="detail-row">
+        <span class="detail-label">Zona notte</span>
+        <span class="detail-text">2 camere da letto</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Living</span>
+        <span class="detail-text">Angolo cottura moderno con piano a induzione e forno a microonde, aria condizionata, lavatrice.</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Bagno</span>
+        <span class="detail-text">Funzionale e completo.</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Spazio esterno</span>
+        <span class="detail-text">Col suo punto di forza rappresentato da barbecue per le cene all'aperto ed un'area relax per goderti il fresco serale.</span>
+      </div>
+    </div>
+  </aside>
+</div>
   <div class="scroll-indicator"><span>Scorri</span><div class="scroll-line"></div></div>
 </header>
 
@@ -899,7 +1151,7 @@ document.querySelectorAll('.faq-question').forEach(function(q){
     </div>
   </div>
   <div class="footer-bottom">
-    <span>2025 Casa Minicapo Mandriola - Tutti i diritti riservati</span>
+    <span>2025 Casa Minicapo - Tutti i diritti riservati</span>
     <span>Fatto con il sole della Sardegna</span>
   </div>
 </footer>
