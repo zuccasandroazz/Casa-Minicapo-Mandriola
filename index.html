@@ -1807,5 +1807,176 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 }
 </style>
+<style id="apartment-mobile-fix">
+/* ============================================================
+   FIX MOBILE PANNELLO APPARTAMENTI - Override finale
+   Nessuna sovrapposizione, tutto dentro lo schermo
+   ============================================================ */
+
+@media (max-width: 768px) {
+  /* Container principale: nessun overflow */
+  section.apartments {
+    overflow-x: hidden !important;
+    padding: 60px 16px !important;
+  }
+  .container {
+    overflow-x: hidden !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* Griglia appartamenti: una colonna, tutto dentro */
+  .apartment-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* Card appartamenti: ridotte e senza overflow */
+  .apartment-card {
+    padding: 22px 18px 20px !important;
+    border-radius: 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+    position: relative !important;
+    margin: 0 !important;
+  }
+
+  /* Icona: più piccola */
+  .apartment-icon {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 10px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .apartment-icon svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  /* Titolo h3: ridotto */
+  .apartment-card h3 {
+    font-size: 1.15rem !important;
+    margin-bottom: 4px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Sottotitolo */
+  .apartment-subtitle {
+    font-size: 0.62rem !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Lista features: compatta */
+  .apartment-features {
+    margin-bottom: 14px !important;
+    padding: 0 !important;
+  }
+
+  .apartment-features li {
+    font-size: 0.78rem !important;
+    padding: 5px 0 5px 18px !important;
+    line-height: 1.4 !important;
+    border-bottom: 1px solid rgba(201,169,97,.08) !important;
+  }
+
+  .apartment-features li::before {
+    top: 12px !important;
+    width: 8px !important;
+  }
+
+  /* Prezzo */
+  .apartment-price {
+    font-size: 1.15rem !important;
+    margin-bottom: 3px !important;
+  }
+
+  .apartment-price small {
+    font-size: 0.62rem !important;
+  }
+
+  /* Nota */
+  .apartment-note {
+    font-size: 0.68rem !important;
+    margin-bottom: 14px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Pulsante card */
+  .apartment-card .btn {
+    padding: 11px 16px !important;
+    font-size: 0.8rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Badge "PIU RICHIESTO": ridotto e riposizionato */
+  .apartment-card.featured::before {
+    font-size: 0.55rem !important;
+    padding: 4px 12px !important;
+    letter-spacing: 1.3px !important;
+    top: -10px !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* Smartphone piccoli */
+@media (max-width: 480px) {
+  section.apartments {
+    padding: 50px 12px !important;
+  }
+
+  .apartment-grid {
+    gap: 14px !important;
+  }
+
+  .apartment-card {
+    padding: 20px 16px 18px !important;
+    border-radius: 12px !important;
+  }
+
+  .apartment-card h3 {
+    font-size: 1.05rem !important;
+  }
+
+  .apartment-features li {
+    font-size: 0.75rem !important;
+    padding: 4px 0 4px 16px !important;
+  }
+
+  .apartment-price {
+    font-size: 1.05rem !important;
+  }
+
+  .apartment-card .btn {
+    padding: 10px 14px !important;
+    font-size: 0.78rem !important;
+  }
+}
+
+/* Tablet verticale (768-960) */
+@media (min-width: 769px) and (max-width: 960px) {
+  .apartment-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+    max-width: 720px !important;
+  }
+  .apartment-card {
+    padding: 28px 22px 24px !important;
+  }
+  .apartment-card h3 {
+    font-size: 1.3rem !important;
+  }
+}
+</style>
 </body>
 </html>
