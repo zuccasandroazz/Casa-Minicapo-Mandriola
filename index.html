@@ -367,7 +367,31 @@ footer{background:var(--sea-deep);color:rgba(255,255,255,.7);padding:70px 44px 3
   @media (max-width:560px){.cta-email{padding:12px 20px}.cta-email span{font-size:.92rem}}
 
   /* Zoom doppio al click */
-</style>
+
+/* ============================================================
+   DISSOLVENZA COPERTINA ALL'INGRESSO (4 secondi)
+   ============================================================ */
+.hero-bg[style*="hero-copertina.jpg"]{
+  animation: coverFadeIn 8s ease-in-out forwards, kenburns 20s ease-in-out infinite alternate !important;
+}
+@keyframes coverFadeIn{
+  0%, 50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* Le altre slide iniziano dopo la dissolvenza della copertina */
+.hero-bg.hero-bg-2{
+  animation-delay: 4s !important;
+}
+.hero-bg.hero-bg-3{
+  animation-delay: 10s !important;
+}
+.hero-bg.hero-bg-4{
+  animation-delay: 16s !important;
+}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
