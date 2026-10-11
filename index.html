@@ -1186,7 +1186,150 @@ document.querySelectorAll('.faq-question').forEach(function(q){
 .floating-email svg{width:24px;height:24px}
 @media (max-width:960px){.floating-email{bottom:20px;left:140px;width:48px;height:48px}.floating-email svg{width:22px;height:22px}}
 @media (max-width:560px){.floating-email{left:96px;width:44px;height:44px}.floating-email svg{width:20px;height:20px}}
-</style>
+
+/* ============================================================
+   OTTIMIZZAZIONE SMARTPHONE (aggiunta 2026)
+   ============================================================ */
+
+/* Smartphone piccoli - 480px e sotto */
+@media (max-width: 480px) {
+  /* Hero: altezza ridotta per evitare troppo spazio vuoto */
+  .hero{min-height:520px}
+  .hero h1{font-size:1.8rem;line-height:1.15}
+  .hero p{font-size:.95rem;margin-bottom:32px;padding:0 4px}
+  .hero-badge{font-size:.65rem;padding:7px 14px;letter-spacing:1.5px;margin-bottom:20px}
+  .hero-cta{gap:10px}
+  .hero-cta .btn{padding:14px 24px;font-size:.88rem}
+  .scroll-indicator{display:none}
+
+  /* Sezioni: padding ridotto */
+  section{padding:60px 18px}
+  .section-title{font-size:1.7rem;margin-bottom:16px}
+  .section-subtitle{font-size:.95rem}
+  .section-label{font-size:.7rem;letter-spacing:2.5px}
+
+  /* Navigazione: menu mobile a tutta larghezza */
+  nav{padding:14px 18px}
+  nav.scrolled{padding:10px 18px}
+  .logo{font-size:1.2rem}
+  .nav-links{padding:20px 18px;gap:16px}
+
+  /* Hero foto copertina: mobile-friendly */
+  .hero-bg[style*="hero-copertina.jpg"]{background-size:100% !important}
+
+  /* Card appartamenti: padding ridotto */
+  .apartment-card{padding:28px 22px 22px;border-radius:16px}
+  .apartment-icon{width:48px;height:48px}
+  .apartment-card h3{font-size:1.4rem}
+  .apartment-features li{font-size:.88rem;padding:7px 0 7px 24px}
+  .apartment-price{font-size:1.4rem}
+
+  /* Servizi: card compatte */
+  .feature-card{padding:26px 20px;border-radius:14px}
+  .feature-icon{width:46px;height:46px}
+  .feature-card h3{font-size:1rem}
+  .feature-card p{font-size:.86rem}
+
+  /* Gallerie: celle più piccole */
+  .gallery-grid, .landscape-grid{grid-auto-rows:130px;gap:8px}
+  .gallery-item, .landscape-item{border-radius:10px}
+  .gallery-caption, .landscape-caption{font-size:.78rem;padding:6px 12px;bottom:10px;left:12px;right:12px}
+  .gallery-tabs{gap:8px;margin-bottom:26px}
+  .gallery-tab{padding:8px 18px;font-size:.82rem}
+
+  /* About: statistiche più compatte */
+  .about-images{height:420px}
+  .about-thumbs{gap:8px}
+  .stat-number{font-size:2rem}
+  .stat-label{font-size:.75rem}
+
+  /* FAQ: più leggibili su mobile */
+  .faq-question{padding:16px 18px;font-size:.92rem}
+  .faq-question svg{width:18px;height:18px}
+  .faq-item.open .faq-answer{padding:0 18px 18px;max-height:400px}
+  .faq-answer p{font-size:.88rem}
+
+  /* Recensioni: padding ridotto */
+  .review-card{padding:24px 20px}
+  .review-card p{font-size:.88rem}
+  .reviewer-avatar{width:38px;height:38px;font-size:.85rem}
+
+  /* Contatti CTA */
+  .cta-inner h2{font-size:1.7rem}
+  .cta p{font-size:.95rem;margin-bottom:28px}
+  .cta-phone{padding:16px 24px;flex-direction:column;text-align:center;gap:10px}
+  .cta-phone-icon{width:46px;height:46px}
+  .cta-phone-text{text-align:center}
+  .cta-phone-text strong{font-size:1.3rem}
+  .cta-prices{gap:10px}
+  .cta-price-card{padding:16px 14px}
+  .cta-price-card .price{font-size:1.3rem}
+
+  /* Footer */
+  footer{padding:50px 18px 24px}
+  .footer-grid{gap:28px;margin-bottom:36px}
+  .footer-brand h4{font-size:1.2rem}
+  .footer-brand p{font-size:.85rem}
+  .footer-col h5{font-size:.72rem;margin-bottom:14px}
+  .footer-col a{font-size:.85rem}
+
+  /* Pulsanti flottanti: più vicini e compatti */
+  .floating-phone{bottom:16px;left:16px;padding:10px 14px 10px 10px;font-size:.75rem}
+  .floating-phone svg{width:16px;height:16px}
+  .floating-email{bottom:16px !important;left:78px !important;width:42px !important;height:42px !important}
+  .floating-email svg{width:20px !important;height:20px !important}
+  .floating-whatsapp{bottom:16px !important;left:128px !important;width:42px !important;height:42px !important}
+  .floating-whatsapp svg{width:20px !important;height:20px !important}
+  .scroll-top{bottom:16px;right:16px;width:40px;height:40px}
+  .scroll-top svg{width:18px;height:18px}
+
+  /* Lightbox: foto grandi ma con margini */
+  .lightbox{padding:10px}
+  .lightbox-img{max-width:96vw;max-height:78vh;border-radius:6px}
+  .lightbox-close{top:10px;right:10px;width:40px;height:40px}
+  .lightbox-nav{width:40px;height:40px}
+  .lightbox-prev{left:6px}
+  .lightbox-next{right:6px}
+  .lightbox-caption{bottom:-38px;font-size:.78rem;padding:7px 14px;max-width:90vw}
+
+  /* Mappa: altezza ridotta */
+  .location-map{height:300px}
+  .map-overlay{padding:12px}
+  .map-address strong{font-size:.95rem}
+  .map-address span{font-size:.78rem}
+  .map-btn{padding:8px 14px;font-size:.78rem}
+}
+
+/* Touch: pulsanti con area minima 44x44px (standard Apple) */
+@media (hover: none) and (pointer: coarse) {
+  .btn{padding:14px 28px}
+  .apartment-card .btn{padding:14px 20px}
+  .map-btn{padding:12px 20px}
+  .gallery-tab{padding:12px 22px}
+  .faq-question{padding:20px 22px}
+}
+
+/* Disabilita animazioni pesanti su mobile per performance */
+@media (max-width: 768px) {
+  .hero-bg{animation:none}
+  .hero-bg:first-of-type{animation:heroFade 24s infinite}
+  .gallery-item:hover, .landscape-item:hover, .about-thumbs > div:hover{transform:none}
+  .feature-card:hover, .review-card:hover, .apartment-card:hover{transform:none;box-shadow:var(--shadow-sm)}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+
+/* iOS: fix per 100vh dinamico */
+@supports (-webkit-touch-callout: none) {
+  .hero{height:100vh;height:-webkit-fill-available}
+}
+
+/* Scrollbar personalizzata su desktop (migliora estetica) */
+@media (min-width: 960px) {
+  ::-webkit-scrollbar{width:10px}
+  ::-webkit-scrollbar-track{background:var(--sand)}
+  ::-webkit-scrollbar-thumb{background:var(--sea-light);border-radius:5px}
+  ::-webkit-scrollbar-thumb:hover{background:var(--sea)}
+}</style>
 
 <button class="scroll-top" id="scrollTop" aria-label="Torna su">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
